@@ -20,6 +20,9 @@ class Relationship(Identified):
     type: Optional[str] = None
     """The type of the relationship (optional)."""
 
+    name: Optional[str] = None
+    """The name of the relationship (optional)."""
+
     weight: Optional[float] = 1.0
     """The edge weight."""
 

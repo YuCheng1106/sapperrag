@@ -6,14 +6,15 @@ from ....retriver.context_builder.builders import LocalContextBuilder
 from ....retriver.structured_search.base import BaseSearch
 from ....retriver.structured_search.local_search.system_prompt import LOCAL_SEARCH_SYSTEM_PROMPT
 
+
 class LocalSearch(BaseSearch):
     """Search orchestration for local search mode."""
 
     def __init__(
-        self,
-        context_builder: LocalContextBuilder,
-        llm: BaseLLM,
-        system_prompt: str = LOCAL_SEARCH_SYSTEM_PROMPT,
+            self,
+            context_builder: LocalContextBuilder,
+            llm: BaseLLM,
+            system_prompt: str = LOCAL_SEARCH_SYSTEM_PROMPT,
     ):
         super().__init__(context_builder=context_builder, llm=llm)
         self.system_prompt = system_prompt

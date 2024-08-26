@@ -1,4 +1,4 @@
-from attribute_embedding import AttributeEmbedder
+  from attribute_embedding import AttributeEmbedder
 from community_detection import CommunityDetection
 from report_generate import CommunityReportGenerator
 

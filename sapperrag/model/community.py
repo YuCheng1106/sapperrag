@@ -29,8 +29,12 @@ class Community(Named):
     covariate_ids: dict[str, list[str]] | None = None
     """Dictionary of different types of covariates related to the community (optional), e.g. claims"""
 
+    rating: float | None = None
+    """Community rating."""
+
     attributes: dict[str, Any] | None = None
-    """A dictionary of additional attributes associated with the community (optional). To be included in the search prompt."""
+    """A dictionary of additional attributes associated with the community (optional). To be included in the search 
+    prompt."""
 
     @classmethod
     def from_dict(

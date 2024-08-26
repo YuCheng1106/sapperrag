@@ -57,6 +57,7 @@ def graph_parse(kg):
                 target=target_id,
                 short_id=rela_id,
                 type=relation["Type"],
+                name=relation["Name"],
                 attributes=relation.get("Attributes", {}),
             ))
 

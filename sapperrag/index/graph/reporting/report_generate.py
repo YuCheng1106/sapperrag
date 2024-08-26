@@ -52,8 +52,13 @@ class CommunityReportGenerator:
             for future in concurrent.futures.as_completed(future_to_community):
                 community_name = future_to_community[future]
                 try:
-                    report = future.result()
+                    report = future.result().replace("json", "").replace("```", "")
+                    report_data = json.loads(report)
+                    title = report_data['title']
+                    rating = report_data['rating']
                     grouped[community_name].full_content = report
+                    grouped[community_name].title = title
+                    grouped[community_name].rating = rating
                     reports.append(report)
                 except Exception as exc:
                     print(f"{community_name} generated an exception: {exc}")
