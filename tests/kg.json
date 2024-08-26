@@ -1,0 +1,883 @@
+[
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "学科课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "从各门科学中选择所需要的知识，系统地组成各种不同的学科",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "c9923db65a41d97c4ce5617217fa047ff87b1e180d0e94951fca26e083b604b7"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "活动课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "注重活动经验，是着眼于学生的兴趣和动机、以学生的主体性活动经验为中心组织的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "a8e0456e03fc0f21c5ca514d14cb5bddfb54bd146fa8eb8f3a5b0550be080c78"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "分科课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "由一门系统学科知识构成的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "8c9fe7913d7fc59aeeee91f6523fb85fe0cc0dff20f47beef15ad5f359d4262c"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "综合课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "由多门学科统整在一起的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "d45a44a5c07b019536f415d3150fb003aff9ba1e9fa790c21b15f335c0c80b9f"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "显性课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "正式列入学校教学计划的各门学科及有组织、有目的的课外活动",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "3c7475005cd30a831e42150ae69c03cfd831c2d58ec131315057c42c53ffae50"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "隐性课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "学校课程计划中未明确规定的、非正式和无意识的学校学习经验",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "2563c86886fcbe79134e7833e4a38595b42681b75f6fe7f6bc01fa305cf8558f"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "国家课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "国家有关部门制定和颁布的课程类型",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "1d4db98e88911b685b8f22045a0c960f324ff1738cfdd6addea0204e198eab32"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "地方课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "地方自主开发并在本地实施的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "dc79026242e013e2a3d9007f2ff0176f62a3a4031c62695c1b6d32915805d0c7"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "校本课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "学校在实施好国家课程和地方课程的前提下，自己开发的适合本校实际的、具有学校自身特点的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "02d6352a20aa71a24b48e440d007d6aba94d93abe3678f3c8319299ce2749831"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "必修课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "一个教育系统或机构法定性规定所有学生必须修习的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "2b82c8b1c1816d694a729b07e69f1c646a134d85902b26dce6382b2bae6a20e5"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "选修课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "一个教育系统或机构法定性允许学生自由选择的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "课程类别",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "e5f092524eba341ffc05c78f4f8df18698838c4fee60ed6488cd1148200316e6"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "直线式",
+            "Attributes": {
+                "定义": "侧重纵向编排的学科课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "c3db03dafff4d3f99939e5e9243d48ff32fee2d5c5c94e5ec64e2a8d361576e6"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "螺旋式",
+            "Attributes": {
+                "定义": "侧重纵向编排的学科课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "c940a16ac9b85d9ff882427d8afcb30ba7cc759b7af8f64fb79fd60f4e951833"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "科目课程",
+            "Attributes": {
+                "定义": "由一门系统学科知识构成的课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "e5d6776e7138c7dddba3ce607936a146b13c5241864332c6d9a38a9928eb9811"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "活动课程",
+            "Name": "研学旅行课程",
+            "Attributes": {
+                "定义": "以研学旅行为内容的新型活动课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "活动课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "注重活动经验，是着眼于学生的兴趣和动机、以学生的主体性活动经验为中心组织的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "5ebfc0c092cfdc7c6e6eab073e8d9f1e5efb19dbcb2f6dc97dd88b5a534082cd"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "活动课程",
+            "Name": "综合实践活动课程",
+            "Attributes": {
+                "定义": "包括信息技术教育、研究性学习、社区服务与社会实践，以及劳动与技术教育四个内容的必修课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "活动课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "注重活动经验，是着眼于学生的兴趣和动机、以学生的主体性活动经验为中心组织的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "97bf4b78335c974ff81e64a16148849c68c52604d6ae2c5123fc4c28dbc0a8c6"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "跨学科整合",
+            "Attributes": {
+                "定义": "不同学科之间的融合",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "2056cc40d497e1fb9904a5222f0d52ee299002924296e6cb8fb5bbd5c082c29a"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "STEM课程",
+            "Attributes": {
+                "定义": "由科学、技术、工程、数学四门学科内容组合形成的课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "区域课程",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "1cd3c3f67bad83baecceae27c361229c054f5bbaac9e7a0899e8ab5325b9117b"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "学科领域",
+            "Name": "科学",
+            "Attributes": {
+                "名称": "科学",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "学科领域",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "0ea557dfb3cc2049f695b60eb7a2b8c7ce6802c82b55fc67597fc17cfc639a98"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "学科领域",
+            "Name": "技术",
+            "Attributes": {
+                "名称": "技术",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "学科领域",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "28719162e0a12e96deed122fe39b8df0cb261b47b7bba564a7d0ab9c7cf979fd"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "学科领域",
+            "Name": "工程",
+            "Attributes": {
+                "名称": "工程",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "学科领域",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "0d4a55889b0a065f5d14dec69c7d7694d93855a3bd223354309a76292985d252"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "学科领域",
+            "Name": "数学",
+            "Attributes": {
+                "名称": "数学",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "学科领域",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "baced7fe6b3b03ab200a8bedce4b00565111fdfd9c942f2ed8b5598053e1c29b"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "品德与社会",
+            "Attributes": {
+                "名称": "品德与社会",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "课程类别",
+            "Name": "综合课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "由多门学科统整在一起的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "27066948a7adbea0e4ef9a26022860464d068ce20fd44a5ff7c01a1405d67f8e"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "信息技术教育",
+            "Attributes": {
+                "名称": "信息技术教育",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "综合实践活动课程",
+            "Attributes": {
+                "定义": "包括信息技术教育、研究性学习、社区服务与社会实践，以及劳动与技术教育四个内容的必修课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "cca32edaffa9e635ad55a32648f67ce255319cf573302390bfd6464154e1a4e5"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "研究性学习",
+            "Attributes": {
+                "名称": "研究性学习",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "综合实践活动课程",
+            "Attributes": {
+                "定义": "包括信息技术教育、研究性学习、社区服务与社会实践，以及劳动与技术教育四个内容的必修课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "a472916dfbc8eab43d3c83daf7b75210aef0153e01632b6333149cd96442270f"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "社区服务与社会实践",
+            "Attributes": {
+                "名称": "社区服务与社会实践",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "综合实践活动课程",
+            "Attributes": {
+                "定义": "包括信息技术教育、研究性学习、社区服务与社会实践，以及劳动与技术教育四个内容的必修课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "2fa842c43c408a896f54b3260e40a8fcf9cdd30c839fd2b7b4d950c57d07d7bc"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "劳动与技术教育",
+            "Attributes": {
+                "名称": "劳动与技术教育",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "综合实践活动课程",
+            "Attributes": {
+                "定义": "包括信息技术教育、研究性学习、社区服务与社会实践，以及劳动与技术教育四个内容的必修课程",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "7b1158b43f9dd0c63aa21ed834d1e4136944c957804bd91bbddd32757c3b93db"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "课程类别",
+            "Name": "人杰地灵诵江西",
+            "Attributes": {
+                "名称": "人杰地灵诵江西",
+                "范围": "Unknown",
+                "目标": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "地方课程",
+            "Attributes": {
+                "类型": "Unknown",
+                "内容": "地方自主开发并在本地实施的课程",
+                "目的": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "6adf1f3d340c23b164c90dbc4371e128f835e847b0c80a799fc9e7eea37cc709"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "课程分类",
+            "Attributes": {
+                "定义": "按照不同维度对课程进行分类",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "2d8e5af0210784962532cec8d280128c51ea058fd0032cf8f7922df74f2a013d"
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "概念",
+            "Name": "课程整合化",
+            "Attributes": {
+                "定义": "中小学课程整合化学习的趋势",
+                "特点": "Unknown",
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "Relation": {
+            "Type": "等同",
+            "Name": "是",
+            "Attributes": {
+                "source_id": 0
+            }
+        },
+        "DirectedEntity": {
+            "Type": "概念",
+            "Name": "概念",
+            "Attributes": {
+                "source_id": 0,
+                "source": "06-2 小学课程的类型.docx"
+            }
+        },
+        "ID": "1239c3f8d796feb12491c3f1f57b790a64b5ccf8a4b2ed0100636ecfc1c636e6"
+    }
+]

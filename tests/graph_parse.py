@@ -1,96 +1,92 @@
 import json
-import torch
-from transformers import BertModel, BertTokenizer, BertConfig
-import numpy as np
+import pandas as pd
+from uuid import uuid4
+from sapperrag.model.text_chunk import TextChunk
+from sapperrag.model.entity import Entity
+from sapperrag.model.relationship import Relationship
 
-# 定义文件路径
-file_path = '../input/kg/graph.json'
+# Define file paths
+file_path = 'kg.json'
+text_source_path = 'source.csv'
 
-# 读取 JSON 文件
+# Load JSON data
 with open(file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
 
-# 初始化实体和关系的列表
+# Load CSV data
+source = pd.read_csv(text_source_path)
+
+# Create TextChunk objects
+text_chunks = [
+    TextChunk(id=row.ID, text=row.TripleSource, short_id=row.ID)
+    for _, row in source.iterrows()
+]
+
 entities = []
 relations = []
 
-# 用于存储实体的字典，用于去重
+# Dictionary to keep track of processed entities
 entity_dict = {}
-next_id = 0
+# id
+# title
+# short_id
+# text_chunk_ids
+# attributes
+# description
 
-# 处理数据
+def process_entity(entity_data: dict, text_chunks_id: []) -> str:
+    """Process an entity, assign a UUID if not already processed, and return the entity ID."""
+    entity_key = json.dumps(entity_data, sort_keys=True, ensure_ascii=False)
+    entity = {}
+    if entity_key not in entity_dict:
+        entity["id"] = str(uuid4())
+        entity["short_id"] = entity["id"]
+        entity["text_chunk_ids"] = json.dumps(text_chunks_id)
+        entity["attributes"] = json.dumps(entity_data.get('Attributes'))
+        entity["title"] = entity_data.get('Name')
+        entity["type"] = entity_data.get('Type')
+        entity["description"] = json.dumps(entity_data.get('Attributes'))
+        entity_dict[entity_key] = entity
+
+    return entity_dict[entity_key]["id"]
+
+
+# Process each item in the JSON data
 for item in data:
     directional_entity = item.get("DirectionalEntity")
     directed_entity = item.get("DirectedEntity")
     relation = item.get("Relation")
-
+    text_chunks_id  = item.get("ID")
     if directional_entity:
-        entity_key = json.dumps(directional_entity, sort_keys=True, ensure_ascii=False)
-        if entity_key not in entity_dict:
-            directional_entity["id"] = str(next_id)
-            entity_dict[entity_key] = directional_entity
-            next_id += 1
-        source_id = entity_dict[entity_key]["id"]
+        source_id = process_entity(directional_entity, [text_chunks_id])
 
     if directed_entity:
-        entity_key = json.dumps(directed_entity, sort_keys=True, ensure_ascii=False)
-        if entity_key not in entity_dict:
-            directed_entity["id"] = str(next_id)
-            entity_dict[entity_key] = directed_entity
-            next_id += 1
-        target_id = entity_dict[entity_key]["id"]
+        target_id = process_entity(directed_entity, [text_chunks_id])
 
     if relation:
         relation["Source"] = source_id
         relation["Target"] = target_id
-        relations.append(relation)
+        relations.append(Relationship(
+            target=target_id,
+            source=source_id,
+            type= relation.get("Type"),
+            id= str(uuid4()),
+            short_id=str(uuid4()),
+            text_unit_ids=json.dumps([text_chunks_id]),
+            attributes=json.dumps(relation.get("Attributes"))
+        ))
 
-# 将去重后的实体从字典中提取到列表中
-entities = list(entity_dict.values())
-
-# 定义文件路径
-model_path = "../embedding/model/pytorch_model.bin"
-config_path = "../embedding/model/config.json"
-vocab_path = "../embedding/model/vocab.txt"
-
-# 加载配置文件
-config = BertConfig.from_json_file(config_path)
-
-# 初始化模型
-model = BertModel(config)
-
-# 加载模型权重
-model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-
-# 加载分词器
-tokenizer = BertTokenizer(vocab_file=vocab_path)
+# If necessary, convert entities and relations to Entity objects or a DataFrame
+entities = [
+    Entity.from_dict(entity_data)
+    for entity_data in entity_dict.values()
+]
 
 
-def get_sentence_embedding(text, model, tokenizer):
-    inputs = tokenizer(text, return_tensors='pt')
-    with torch.no_grad():
-        outputs = model(**inputs)
-    # 获取 [CLS] token 的向量
-    cls_embedding = outputs.last_hidden_state[:, 0, :].numpy()
-    return cls_embedding
+# Example: Converting relations to a DataFrame (if needed)
+relations_df = pd.DataFrame(relations)
+entities_df = pd.DataFrame(entities)
 
-
-# 生成描述嵌入并保存到文件
-print("Entities:")
-for entity in entities:
-    description = " ".join([f"{k}: {v}" for k, v in entity["Attributes"].items()])
-    entity["description_embedding"] = get_sentence_embedding(description, model, tokenizer).tolist()
-    print(entity)
-
-with open("../input/kg/entities.json", "w", encoding="utf-8") as f:
-    json.dump(entities, f, ensure_ascii=False, indent=4)
-
-
-print("\nRelations:")
-for relation in relations:
-    description = " ".join([f"{k}: {v}" for k, v in relation["Attributes"].items()])
-    relation["description_embedding"] = get_sentence_embedding(description, model, tokenizer).tolist()
-    print(relation)
-
-with open("../input/kg/relations.json", "w", encoding="utf-8") as f:
-    json.dump(relations, f, ensure_ascii=False, indent=4)
+# Example: Saving entities and relations to a file or further processing
+entities_df.to_csv('entities.csv', index=False)
+relations_df.to_csv('relations.csv', index=False)
