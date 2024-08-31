@@ -89,9 +89,4 @@ def load_community(csv_file_path: str):
     return dataclass_list
 
 
-def remove_unknown_attributes(entities):
-    for entity in entities:
-        keys_to_remove = [key for key, value in entity.attributes.items() if value == "Unknown" or value == "unknown"]
-        for key in keys_to_remove:
-            del entity.attributes[key]
-    return entities
+
