@@ -2,20 +2,20 @@ inference_capacity = """
 Triple - A type triple refers to an instance RDF triple, which is linked to its entity type and relationship type using the symbol "-" .
 
 Please help determine if the following triple is suitable for inference.
-If the triple contains private domain information or insufficient background information, please output 'No'. Otherwise, please output 'Yes'.
-Only output the content of the output in Example format, do not output "output:" or other irrelevant characters.
+If the triple contains private domain information or insufficient background information, please output_try 'No'. Otherwise, please output_try 'Yes'.
+Only output_try the content of the output_try in Example format, do not output_try "output_try:" or other irrelevant characters.
 
 Example:
 input: (Li Hua, is the son, ?)-(People, Relationship, People)
-output: No
+output_try: No
 input: (Li Hua, age, ?)-(People, age, Number)
 
 input:(Python Tuple, Feature, ?)-(Basic Concept, Feature, Fixed size)
-output: Yes
+output_try: Yes
 
 Query:
 input:{{masked_triple}}
-output:
+output_try:
 """
 
 kg_inference = """
@@ -23,15 +23,15 @@ Triple - A type triple refers to an instance RDF triple, which is linked to its 
 
 Please reason and complete the obscured triple elements.
 Please provide three reasonable reasoning results and ensure that these results have practical application value. 
-Only output the content of the output in Example format, do not output "output:" or other irrelevant characters.
+Only output_try the content of the output_try in Example format, do not output_try "output_try:" or other irrelevant characters.
 
 Example:
 input: (Tuple, Feature, ?)-(Basic Concept, Feature, Fixed size)
-output: (Tuple, Feature, Fixed number of elements)-(Basic Concept, Feature, Fixed size); (Tuple, Feature, Elements can be of different types)-(Basic Concept, Feature, Fixed size); (Tuple, Feature, Ordered elements)-(Basic Concept, Feature, Fixed size)
+output_try: (Tuple, Feature, Fixed number of elements)-(Basic Concept, Feature, Fixed size); (Tuple, Feature, Elements can be of different types)-(Basic Concept, Feature, Fixed size); (Tuple, Feature, Ordered elements)-(Basic Concept, Feature, Fixed size)
 
 Query:
 input:{{masked_triple}}
-output:
+output_try:
 """
 
 entity_attributes_infer = """
@@ -39,18 +39,18 @@ The attributes of the given entity are contained in parentheses connected to it,
         
 Please infer the attribute values corresponding to the given entity's attributes.
 Pay attention to ensuring the accuracy and practicality of inference attribute values.
-Only output the content of the output in Example format, do not output "output:" or other irrelevant characters.
+Only output_try the content of the output_try in Example format, do not output_try "output_try:" or other irrelevant characters.
 
 Example:
 input: 内存(容量, 类型, 频率, 电压, 时序, 访问速度)
-output: 容量: 大; 类型: DDR4; 频率: 高; 电压: 低; 时序: 紧凑; 访问速度: 快
+output_try: 容量: 大; 类型: DDR4; 频率: 高; 电压: 低; 时序: 紧凑; 访问速度: 快
 
 input: 水(溶解性, 沸点, 熔点, 密度, 极性, 比热容)
-output: 溶解性: 高; 沸点: 100度(一个大气压下); 熔点: 0度(一个大气压下); 密度: 1g/cm3(4摄氏度时); 极性: 极性分子; 比热容: 4.18J/g·K
+output_try: 溶解性: 高; 沸点: 100度(一个大气压下); 熔点: 0度(一个大气压下); 密度: 1g/cm3(4摄氏度时); 极性: 极性分子; 比热容: 4.18J/g·K
 
 Query:
 input:{{entity_with_attribute_keys}}
-output:
+output_try:
 """
 
 triples_source_inference = """

@@ -10,7 +10,7 @@ from sapperrag.model.model_load import load_relationships, load_entities, load_t
 
 # 加载环境变量
 load_dotenv("../.env")
-openai_key = os.getenv("OPENAI_KEY")
+openai_key = "sk-ZkLoqE4Hrq2Athxf68Bb83AfCb0243F0B7598fC27530324f"
 base_url = os.getenv("OPENAI_BASE_URL")
 
 # 定义文件路径
@@ -29,10 +29,10 @@ query = "国家课程、地方课程和校本课程在小学课程体系中的�
 # 初始化 ChatOpenAI 对象
 chatgpt = ChatOpenAI(openai_key, base_url)
 
-entities = load_entities("../output/entities.csv")
-relationships = load_relationships("../output/relationships.csv")
-text_chunks = load_text_chunks("../output/text_chunks.csv")
-community_reports = load_community("../output/communities.csv")
+entities = load_entities("../output_try/entities.csv")
+relationships = load_relationships("../output_try/relationships.csv")
+text_chunks = load_text_chunks("../output_try/text_chunks.csv")
+community_reports = load_community("../output_try/communities.csv")
 # 初始化 LocalSearchMixedContext 对象
 context_builder = LocalSearchMixedContext(entities, relationships, text_chunks, community_reports, embeder.embed)
 
@@ -50,10 +50,10 @@ print("Search Results:", results)
 #     # 初始化 ChatOpenAI 对象
 #     chatgpt = ChatOpenAI(openai_key, base_url)
 #
-#     entities = load_entities("../output/entities.csv")
-#     relationships = load_relationships("../output/relationships.csv")
-#     text_chunks = load_text_chunks("../output/text_chunks.csv")
-#     community_reports = load_community("../output/communities.csv")
+#     entities = load_entities("../output_try/entities.csv")
+#     relationships = load_relationships("../output_try/relationships.csv")
+#     text_chunks = load_text_chunks("../output_try/text_chunks.csv")
+#     community_reports = load_community("../output_try/communities.csv")
 #     # 初始化 LocalSearchMixedContext 对象
 #     context_builder = LocalSearchMixedContext(entities, relationships, text_chunks, community_reports, embeder.embed)
 #
@@ -64,21 +64,20 @@ print("Search Results:", results)
 #     results = search_engine.search(query)
 #     return results
 #
-
+#
 # # 打开现有的CSV文件并逐行读取
-# with open('questions_and_answers.csv', 'r', encoding='utf-8') as csvfile:
+# with open('questions.csv', 'r', encoding='utf-8') as csvfile:
 #     reader = csv.DictReader(csvfile)
+#     fieldnames = reader.fieldnames + ['answer']  # 确保包含 'answer' 列
 #
 #     # 准备写入更新后的CSV文件
-#     with open('questions_and_answers_updated.csv', 'w', newline='', encoding='utf-8') as csvfile_out:
-#         fieldnames = reader.fieldnames + ['answer']  # 确保包含 'answer' 列
+#     with open('questions_updated.csv', 'w', newline='', encoding='utf-8') as csvfile_out:
 #         writer = csv.DictWriter(csvfile_out, fieldnames=fieldnames)
-#
 #         writer.writeheader()
 #
 #         # 逐行处理每个query并生成answer
 #         for row in reader:
 #             query = row['query']
 #             answer = generate_answer(query)
-#             row['answer'] = answer
+#             row['answer'] = answer  # 更新字典，添加答案
 #             writer.writerow(row)

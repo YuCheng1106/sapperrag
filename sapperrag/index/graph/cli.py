@@ -143,16 +143,16 @@ class GraphIndexer(Indexer):
         # read_result = self.local_file_reader.read(dir_path=dir_path)
         # text_file_chunker = TextFileChunker()
         # chunk_result = text_file_chunker.chunk(read_result.documents)
-        # save_dataclasses_to_csv(chunk_result, '../output/source.csv')
+        # save_dataclasses_to_csv(chunk_result, '../output_try/text_chunks.csv')
         # schema_constructor = SchemaConstructor(text_chunks=chunk_result, llm=self.llm)
         # schema_result = schema_constructor.construct()
         # schema = schema_result.schema
         # definition = schema_result.definition
 
-        # with open("D:\workplace\sapperrag\output\kg_schema.json", 'r', encoding='utf-8') as file:
+        # with open("D:\workplace\sapperrag\output_try\kg_schema.json", 'r', encoding='utf-8') as file:
         #     schema = json.load(file)
         #
-        # with open("D:\workplace\sapperrag\output\definition.json", 'r', encoding='utf-8') as file:
+        # with open("D:\workplace\sapperrag\output_try\definition.json", 'r', encoding='utf-8') as file:
         #     definition = json.load(file)
 
         ai_response_getter = AIResponseGetter(llm_api_parameter=openai_api_parameter)
@@ -164,8 +164,8 @@ class GraphIndexer(Indexer):
         #     kg_schema=schema,
         #     schema_definition=definition)
 
-        # save_dataclasses_to_csv(entities, '../output/entities.csv')
-        # save_dataclasses_to_csv(relationships, '../output/relationships.csv')
+        # save_dataclasses_to_csv(entities, '../output_try/entities.csv')
+        # save_dataclasses_to_csv(relationships, '../output_try/relationships.csv')
 
         entities = load_entities("../output/entities.csv")
         relationships = load_relationships("../output/relationships.csv")

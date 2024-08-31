@@ -8,6 +8,7 @@ from sapperrag.index.text.cli import TextIndexer
 from dotenv import load_dotenv
 import os
 
+os.environ.clear()
 load_dotenv("../.env")
 openai_key = os.getenv("OPENAI_KEY")
 base_url = os.getenv("OPENAI_BASE_URL")

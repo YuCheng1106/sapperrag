@@ -18,7 +18,7 @@ source = pd.read_csv(text_source_path)
 
 # Create TextChunk objects
 text_chunks = [
-    TextChunk(id=row.id, text=row.text, short_id=row.short_id)
+    TextChunk(id=row.ID, text=row.TripleSource, short_id=row.ID)
     for _, row in source.iterrows()
 ]
 
@@ -41,8 +41,8 @@ def process_entity(entity_data: dict, text_chunks_id: []) -> str:
     entity_key = json.dumps(entity_data, sort_keys=True, ensure_ascii=False)
     entity = {}
     if entity_key not in entity_dict:
-        entity["id"] = str(uuid4())
-        entity["short_id"] = entity["id"]
+        entity["id"] = str(uuid4())[:8]
+        entity["short_id"] = entity["id"][:8]
         entity["text_chunk_ids"] = json.dumps(text_chunks_id)
         entity["attributes"] = entity_data.get('Attributes')
         entity["title"] = entity_data.get('Name')
@@ -91,4 +91,4 @@ entities_df = pd.DataFrame(entities)
 
 # Example: Saving entities and relations to a file or further processing
 entities_df.to_csv('entities.csv', index=False, encoding="utf-8")
-relations_df.to_csv('relations.csv', index=False)
+relations_df.to_csv('relationships.csv', index=False)

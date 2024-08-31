@@ -14,7 +14,7 @@ The report should include the following sections:
 - RATING EXPLANATION: Give a single sentence explanation of the IMPACT severity rating.
 - DETAILED FINDINGS: A list of 5-10 key insights about the community. Each insight should have a short summary followed by multiple paragraphs of explanatory text grounded according to the grounding rules below. Be comprehensive.
 
-Return output as a well-formed JSON-formatted string with the following format:
+Return output_try as a well-formed JSON-formatted string with the following format:
     {{
         "title": "<report_title>",
         "summary": "<executive_summary>",
@@ -40,7 +40,7 @@ Points supported by data should list their data references as follows:
 
 Do not list more than 5 record ids in a single reference. Instead, list the top 5 most relevant record ids and add "+more" to indicate that there are more.
 
-The output results are presented in Chinese.
+The output_try results are presented in Chinese.
 
 For example:
 "Person X is the owner of Company Y and subject to many allegations of wrongdoing [Data: Reports (1), Entities (5, 7); Relationships (23); Claims (7, 2, 34, 64, 46, +more)]."
@@ -64,7 +64,7 @@ The report should include the following sections:
 - RATING EXPLANATION: Give a single sentence explanation of the IMPACT severity rating.
 - DETAILED FINDINGS: A list of 5-10 key insights about the community. Each insight should have a short summary followed by multiple paragraphs of explanatory text grounded according to the grounding rules below. Be comprehensive.
 
-Return output as a well-formed JSON-formatted string with the following format:
+Return output_try as a well-formed JSON-formatted string with the following format:
     {{
         "title": "<report_title>",
         "summary": "<executive_summary>",

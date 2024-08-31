@@ -18,7 +18,7 @@ SCHEMA_CONSTRUCTOR = """
     @Commands Please extract useful entities for {{aim}},and analyze what entity category each entity belongs to. 
     @Command Infer what kind of relationship exists between entities based on the article.
     @Rules When extracting entities, focus on individuals that can exist independently, such as planets, oceans, islands, etc.
-    @Rules The identified relationships between entities must be output in the form of triples.The first two elements of a triplet are entities, and the third element is entity relationship. 
+    @Rules The identified relationships between entities must be output_try in the form of triples.The first two elements of a triplet are entities, and the third element is entity relationship. 
     @Rules Entity relationships should be concise and not exceed ten words.The first entity acts on the second entity through a relationship.
     @Rules Ensure that each relationship is not a noun.
     @Rules Output the source text corresponding to each triplet.
@@ -43,10 +43,10 @@ SCHEMA_CONSTRUCTOR = """
 }
 @Instruction关系分类器
 {
-   There are some triples in the output of @Instruction提取器, and the format of the triples is (Entity 1, Entity 2, Relationship). 
+   There are some triples in the output_try of @Instruction提取器, and the format of the triples is (Entity 1, Entity 2, Relationship). 
    @Commands Extract the relationships in the triples you mentioned above (the third element of the triplet), classify entity relationships with the highest level of abstraction as far as possible.
    @Commands Provide a definition for each entity relationship category.
-   @Rules Only output entity relationships, no need to provide examples for each type of entity relationship
+   @Rules Only output_try entity relationships, no need to provide examples for each type of entity relationship
    @Rules The relationship category is usually a verb phrase and cannot be a noun and no more than five words
    @Format{
         &&Entity Relationship Category 1, Entity Relationship Category 2, Entity Relationship Category 3&&
@@ -65,9 +65,9 @@ Following is some type definition:
 {{definition}}
 {{oringinal_type_string}}
 {{type_string}}
-@Commands    Determine whether the new entity category is semantically similar to the original entity category. If the semantically similar according to the type definition, replace the new entity category with the original entity relationship category and output all final new entity categories
-@Commands   Determine whether the new entity relationship category is semantically similar to the original entity relationship category. If the semantically similar, replace the new entity relationship category with the original entity relationship category and output all final new entity relationship categories
-@Rules Do not output the analysis process, only output the final result.
+@Commands    Determine whether the new entity category is semantically similar to the original entity category. If the semantically similar according to the type definition, replace the new entity category with the original entity relationship category and output_try all final new entity categories
+@Commands   Determine whether the new entity relationship category is semantically similar to the original entity relationship category. If the semantically similar, replace the new entity relationship category with the original entity relationship category and output_try all final new entity relationship categories
+@Rules Do not output_try the analysis process, only output_try the final result.
 @Format{
    entity categories: entity category1,entity category2,entity category3
    entity relationship categories: entity relationship category1,entity relationship category2,entity relationship category3

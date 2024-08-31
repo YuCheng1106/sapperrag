@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/output/communities.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/output/import_data.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/output/source.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/output/text_chunks.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/output1/data_tran.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/output1/entities.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/output_try/kg.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sapperrag/retriver/structured_search/local_search/system_prompt.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/app.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/generate.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/graph_parse_test.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/query_generate.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/questions_and_answers_updated.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/questions_updated.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/source.csv" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>

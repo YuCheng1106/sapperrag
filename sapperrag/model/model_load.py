@@ -38,7 +38,9 @@ def load_entities(csv_file_path: str, communities=None, entities=None):
         for entity in entities:
             entity.community_ids = entity_to_communities[entity.id]
 
-    return entities
+        last_entities = remove_unknown_attributes(entities=entities)
+
+    return last_entities
 
 
 def load_text_chunks(csv_file_path: str):
@@ -87,3 +89,9 @@ def load_community(csv_file_path: str):
     return dataclass_list
 
 
+def remove_unknown_attributes(entities):
+    for entity in entities:
+        keys_to_remove = [key for key, value in entity.attributes.items() if value == "Unknown" or value == "unknown"]
+        for key in keys_to_remove:
+            del entity.attributes[key]
+    return entities

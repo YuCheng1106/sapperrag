@@ -147,7 +147,7 @@ class CommunityDetection:
                 Community(
                     level=value["level"],
                     entity_ids=value["entity_ids"],
-                    id=str(uuid.uuid4()),
+                    id=str(uuid.uuid4())[:8],
                     title=value['title'],
                     full_content="\n".join(value["entity_descriptions"]),
                     short_id=value["id"],

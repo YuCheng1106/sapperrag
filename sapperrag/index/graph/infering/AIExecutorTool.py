@@ -209,14 +209,14 @@ class PreAIResponseGetter:
             entity types definitions: ${ {{entity_types_definitions}} }$
         }
         @Commands Extracting entities from the documentation based on the given entity types and definitions.
-        @Commands Do not output any additional text instructions other than those specified in the format.
+        @Commands Do not output_try any additional text instructions other than those specified in the format.
         @OutputVariable{
             ${Entities}$
         }
         @Rules You need to analyze each token in the documentation and determine if it is an entity.
         @Rules Ensure that the extracted entities match the entity types and definitions provided.
-        @Rules Strictly ensure that the output entity can be found in the original text and don`t make any change.
-        @Rules The format of output (Entities) is "entity: entity type".
+        @Rules Strictly ensure that the output_try entity can be found in the original text and don`t make any change.
+        @Rules The format of output_try (Entities) is "entity: entity type".
         @Format{ 
             entity1: type1; entity2: type2; entity3: type3; ...
         }   @Example{
@@ -251,7 +251,7 @@ You are now the 三元组提取器 defined above, please complete the user inter
     }
     @ContextControl {
         @Rules Ensure that the determined relation accurately correspond to the content in the original text.
-        @Rules Ensure consistency between the entity of the output triples and the provided entities.
+        @Rules Ensure consistency between the entity of the output_try triples and the provided entities.
         @Rules Ensure that the components of building instance triples and type triples strictly come from input variable.
     }
     @Instruction Identify relation{
@@ -263,14 +263,14 @@ You are now the 三元组提取器 defined above, please complete the user inter
         @Commands Based on the documentation and the given relation type definitions, determine whether there is a relation between provided entities.
         @Commands Identify and analyze the entity type in parentheses attached to each entity in entities.
         @Commands Attach the corresponding entity type and relationship type to each triples to form a type triples.
-        @Commands Do not output any additional text instructions other than those specified in the @Format.
+        @Commands Do not output_try any additional text instructions other than those specified in the @Format.
         @OutputVariable{
             ${Triples}$
         }
         @Rules Carefully determine whether an existing relation type is satisfied between any two entities.
-        @Rules Ensure all output entities and types must be strictly selected from the provided input variable and are not allowed to exceed this range.
+        @Rules Ensure all output_try entities and types must be strictly selected from the provided input variable and are not allowed to exceed this range.
         @Rules Ensure that each entity corresponds strictly to the type indicated in parentheses.
-        @Rules The format of output (Triples) is "(entity1 name, relation, entity2 name)-(type of entity1, type of relation, type of entity2)"
+        @Rules The format of output_try (Triples) is "(entity1 name, relation, entity2 name)-(type of entity1, type of relation, type of entity2)"
         @Format{
             (entity1, relation1, entity2)-(type of entity1, type of relation1, type of entity2); (entity3, relation2, entity4)-(type of entity3, type of relation2, type of entity4); ...
         }   @Example{
@@ -313,13 +313,13 @@ You are now the 三元组提取器 defined above, please complete the user inter
         }
         @Commands Based on the documentation and the given type attributes, extract attribute values of entities of the same type.
         @Commands Extract all attributes of entity type declarations, and set them to Unknown if attribute values cannot be found.
-        @Commands Do not output any additional text instructions other than those specified in the format.
+        @Commands Do not output_try any additional text instructions other than those specified in the format.
         @OutputVariable{
             ${Entities_with_attributes}$
         } 
         @Rules Ensure that the attributes corresponding to entities of the same type are accurately extracted.
-        @Rules Strictly ensure that the output entity can be found in the original text and don`t make any change.
-        @Rules The format of output (Entity_with_attributes) is "entity(attribute1: value1 && attribute2: value2, ...)".
+        @Rules Strictly ensure that the output_try entity can be found in the original text and don`t make any change.
+        @Rules The format of output_try (Entity_with_attributes) is "entity(attribute1: value1 && attribute2: value2, ...)".
         @Format{
             entity1(attribute1: value1 && attribute2: value2); entity2(attribute3: value3 && attribute4: value4); ...
         }   @Example{
