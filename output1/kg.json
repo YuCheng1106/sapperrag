@@ -1,0 +1,431 @@
+[
+    {
+        "DirectionalEntity": {
+            "Type": "大学",
+            "Attributes": {
+                "name": "JiangxiNormalUniversity",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "监督",
+            "Attributes": {
+                "name": "supervisedby",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "QingHuang",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "大学",
+            "Attributes": {
+                "name": "JiangxiNormalUniversity",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "监督",
+            "Attributes": {
+                "name": "supervisedby",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "ZhenchangXing",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "研究",
+            "Attributes": {
+                "name": "conductsresearchwith",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "QingHuang",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "研究",
+            "Attributes": {
+                "name": "conductsresearchwith",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "ZhenchangXing",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "就读",
+            "Attributes": {
+                "name": "attended",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "大学",
+            "Attributes": {
+                "name": "JiangxiNormalUniversity",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "研究",
+            "Attributes": {
+                "name": "studiedunder",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "QingHuang",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "研究",
+            "Attributes": {
+                "name": "studiedunder",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "教授",
+            "Attributes": {
+                "name": "ZhenchangXing",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "发表",
+            "Attributes": {
+                "name": "publishedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "学术期刊",
+            "Attributes": {
+                "name": "TOSEM",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "软件",
+            "Attributes": {
+                "name": "PromptSapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "发表",
+            "Attributes": {
+                "name": "publishedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "学术期刊",
+            "Attributes": {
+                "name": "TOSEM",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "AI平台",
+            "Attributes": {
+                "名称": "Sapper",
+                "开发者": "Unknown",
+                "版本": "Unknown",
+                "name": "Sapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "开发",
+            "Attributes": {
+                "name": "developedby",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "AI平台",
+            "Attributes": {
+                "名称": "Sapper",
+                "开发者": "Unknown",
+                "版本": "Unknown",
+                "name": "Sapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "推广",
+            "Attributes": {
+                "name": "featuredby",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "电视台",
+            "Attributes": {
+                "name": "JiangxiTV",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "AI平台",
+            "Attributes": {
+                "名称": "Sapper",
+                "开发者": "Unknown",
+                "版本": "Unknown",
+                "name": "Sapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "推广",
+            "Attributes": {
+                "name": "featuredby",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "公众号",
+            "Attributes": {
+                "name": "MachineHeart",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "AI平台",
+            "Attributes": {
+                "名称": "Sapper",
+                "开发者": "Unknown",
+                "版本": "Unknown",
+                "name": "Sapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "推广",
+            "Attributes": {
+                "name": "featuredin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "JiangxiProvince4thAchievementsMatchmakingConference",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "AI平台",
+            "Attributes": {
+                "名称": "Sapper",
+                "开发者": "Unknown",
+                "版本": "Unknown",
+                "name": "Sapper",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "推广",
+            "Attributes": {
+                "name": "featuredin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "2023ChinaSoftwareConference",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "参与",
+            "Attributes": {
+                "name": "participatedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "5thGlobalCampusAIAlgorithmEliteCompetition",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "参与",
+            "Attributes": {
+                "name": "participatedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "NationalUndergraduateComputerSystemAbilityCompetitionandthe3rdOceanBaseDatabaseCompetition",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "参与",
+            "Attributes": {
+                "name": "participatedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "18th\"ChallengeCup\"JiangxiUndergraduateAcademicScienceandTechnologyWorksCompetition",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    },
+    {
+        "DirectionalEntity": {
+            "Type": "个人",
+            "Attributes": {
+                "name": "ChengYu",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "Relation": {
+            "Type": "参与",
+            "Attributes": {
+                "name": "participatedin",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        },
+        "DirectedEntity": {
+            "Type": "会议",
+            "Attributes": {
+                "name": "ChinaCollegeComputerCompetition–NetworkTechnologyChallenge",
+                "source_id": "c8b4707a-d2ec-4e9c-84b9-54fcf7b29f36"
+            }
+        }
+    }
+]

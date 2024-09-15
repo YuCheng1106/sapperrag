@@ -1,0 +1,53 @@
+id,short_id,text,text_embedding,entity_ids,relationship_ids,covariate_ids,n_tokens,document_ids,attributes
+7f3a219b-c1d3-4be9-9a38-caeed1844979,0,"程煜
+?183-2287-7197
+?yc@jxnu.edu.cn
+?教育背景
+江西师范大学
+2021.09 – 至
+今
+在读本科生
+计算机科学与技术
+预计2025年7月毕业
+? 班级排名: 2/32, 2/32
+? 主修课程：高级语言处理，数据结构，计算机组成原理，计算机网络，软件工程等
+? 获得荣誉: 连续2年获得校综合一等奖学金、获优秀共青团员等
+?科研经历
+从大一开始在江西师范大学的黄箐教授和澳大利亚国立大学的邢振昌教授的联合指导下进行了学术研究，至少
+每周召开一次在线会议，讨论学术研究问题。
+在这期间，我积极参与并完成了多个项目，这使我在知识图谱、提示学习、预训练语言模型和程序分析等领域
+获得了丰富的知识。这些研究工作不仅加深了我对这些领域的理解，还提高了我在该领域的专业知识和技能。
+自GitHub Copilot发布以来，在两位导师的指导下，我着手开展了大型语言模型落地具体场景的研究。最终，我
+作为第一作者在TOSEM上发表了题为《Prompt Sapper: A LLM-Empowered Production Tool for Building AI
+Chains》的论文。这篇论文系统地审查、总结、完善并扩展了AI链的概念，将软件工程中的最佳实践纳入AI链
+工程中，以系统化的方法论来指导AI链工程。
+同时，我还参与研发名为Sapper 的AI智能体开发平台，这不仅是一款基础软件，提供自然语言集成开发环境，
+更是一个智能服务生态系统，为“AI+”行业的发展提供强大支持。该成果在江西卫视、知名公众号“机器之
+心”
+、江西省第四届成果对接会、2023年中国软件大会等多个场合获得广泛传播。
+? Yu Cheng, Jieshan Chen, Qing Huang, Zhenchang Xing, Xiwei Xu, and Qinghua Lu. 2023. Prompt Sapper:
+A LLM-Empowered Production Tool for Building AI Chains. (accepted on TOSEM).
+? Sapper: AI 智能体开发平台。我负责参与平台的技术架构设计、前后端开发以及核心算法的优化和开发。
+? Qing Huang, Yanbang Sun, Zhenchang Xing, Min Yu, Xiwei Xu, and Qinghua Lu. 2023. API Entity and
+Relation Joint Extraction from Text via Dynamic Prompt-tuned Language Model. (accepted on TOSEM). 我
+参与了这项工作，负责基准工具的复现，并进行了论文中评估效果的实验。
+?竞赛经历
+? 第五届全球校园人工智能算法精英大赛
+国家一等奖2023.11 – 2023.12
+? 全国大学生计算机系统能力大赛暨第三届OceanBase数据库大赛
+省级一等奖2023.10 – 2023.11
+? 第十八届“挑战杯”江西省大学生课外学术科技作品竞赛
+省级二等奖2022.10 – 2023.05
+? 中国高校计算机大赛——网络技术挑战赛
+省级三等奖2023.10 – 2023.11
+?专业技能
+? 编程语言: Python ?C > Java
+? 专业证书: 已过计算机二级
+? 技术栈: 熟练掌握Flask、FastAPI等Python后端框架，以及Node和React前端开发框架
+?其他
+? GitHub: https://github.com/YuCheng1106
+? 语言: 英语- 已过英语四级，能够独立撰写并发表英文期刊
+?+18322877197
+?yc@jxnu.edu.cn
+?https://github.com/YuCheng1106
+",,,,,,['1818e2a3-2f36-4f6e-829f-660c6620b8cc'],

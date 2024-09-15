@@ -1,15 +1,18 @@
 import pandas as pd
 from typing import Any, cast
+from sapperrag.llm.text_utils import num_tokens
 
 
 def build_entity_context(
         selected_entities,
+        token_encoder,
         context_name="Entities",
         column_delimiter: str = "|",
         max_tokens: int = 8000
 ):
     current_context_text = f"-----{context_name}-----" + "\n"
-    header = ["id", "entity_type", "description"]
+    current_token = 0
+    header = ["id", "entity_type", "text"]
     current_context_text += column_delimiter.join(header) + "\n"
     all_context_records = [header]
 
@@ -25,6 +28,9 @@ def build_entity_context(
 
         current_context_text += new_context_text
         all_context_records.append(new_context)
+        current_token += num_tokens(current_context_text, token_encoder)
+        if current_token >= max_tokens:
+            break
 
     if len(all_context_records) > 1:
         record_df = pd.DataFrame(

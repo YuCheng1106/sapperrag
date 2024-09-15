@@ -1,0 +1,5 @@
+.env
+test/embedding/model/
+*.pyc
+__pycache__/
+.idea

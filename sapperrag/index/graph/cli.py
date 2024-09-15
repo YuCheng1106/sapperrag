@@ -143,7 +143,7 @@ class GraphIndexer(Indexer):
         read_result = self.local_file_reader.read(dir_path=dir_path)
         text_file_chunker = TextFileChunker()
         chunk_result = text_file_chunker.chunk(read_result.documents)
-        save_dataclasses_to_csv(chunk_result, '../output/text_chunks.csv')
+        # save_dataclasses_to_csv(chunk_result, '../output/source.csv')
         # schema_constructor = SchemaConstructor(text_chunks=chunk_result, llm=self.llm)
         # schema_result = schema_constructor.construct()
         # schema = schema_result.schema
@@ -163,7 +163,7 @@ class GraphIndexer(Indexer):
         #     text_chunks=chunk_result,
         #     kg_schema=schema,
         #     schema_definition=definition)
-        #
+
         # save_dataclasses_to_csv(entities, '../output/entities.csv')
         # save_dataclasses_to_csv(relationships, '../output/relationships.csv')
 
@@ -174,6 +174,8 @@ class GraphIndexer(Indexer):
         graph = community_detector.create_graph(vertices, edges)
         communities = community_detector.detect_communities(graph)
         save_dataclasses_to_csv(communities, '../output/communities.csv')
+        entities = load_entities("../output/entities.csv", entities=entities, communities=communities)
+        save_dataclasses_to_csv(entities, "../output/entities.csv")
 
         generator = CommunityReportGenerator(llm=self.llm, input_data=communities)
         reports_df = generator.generate_reports()

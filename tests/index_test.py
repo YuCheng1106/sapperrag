@@ -15,6 +15,6 @@ if not openai_key:
 # text_file_chunker = TextFileChunker()
 # chunk_result = text_file_chunker.chunk(read_result.documents)
 
-run_indexer("../input", "graph")
+run_indexer("../input", "text")
 
 

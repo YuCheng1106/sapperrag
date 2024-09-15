@@ -8,11 +8,11 @@ import asyncio
 
 
 class TextFileChunker(BaseChunker):
-    def __init__(self, strategy_type: str = "regex", **kwargs):
+    def __init__(self, chunk_type: str = "regex", **kwargs):
         super().__init__()
-        self.chunker = ChunkToolFacTory().strategies.get(strategy_type)
+        self.chunker = ChunkToolFacTory().strategies.get(chunk_type)
         if not self.chunker:
-            raise ValueError(f"Strategy {strategy_type} is not supported.")
+            raise ValueError(f"Strategy {chunk_type} is not supported.")
 
     def chunk(self, documents: List[Document]) -> List[TextChunk]:
         """Chunks the text based on the selected strategy."""

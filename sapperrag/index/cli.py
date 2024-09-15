@@ -16,7 +16,6 @@ openai_api_parameter.openai_api_key_list = openai_key_list
 
 
 def run_indexer(dir_path, index_type):
-
     local_file_reader = DocumentReader()
     chatgpt = ChatOpenAI(openai_key, base_url)
     embeder = OpenAIEmbedding(openai_key, base_url, "text-embedding-3-small")
@@ -24,7 +23,7 @@ def run_indexer(dir_path, index_type):
     if index_type == "graph":
         indexer = GraphIndexer(chatgpt, embeder, local_file_reader)
     else:
-        indexer = TextIndexer()
+        indexer = TextIndexer(chatgpt, embeder, local_file_reader)
     return indexer.build_index(dir_path)
 
 

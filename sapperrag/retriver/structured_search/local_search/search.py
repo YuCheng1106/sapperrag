@@ -1,30 +1,39 @@
+import json
 import time
 import asyncio
 from typing import Any
+
+import pandas as pd
+
 from ....llm.base import BaseLLM
 from ....retriver.context_builder.builders import LocalContextBuilder
 from ....retriver.structured_search.base import BaseSearch
 from ....retriver.structured_search.local_search.system_prompt import LOCAL_SEARCH_SYSTEM_PROMPT
 
+
 class LocalSearch(BaseSearch):
     """Search orchestration for local search mode."""
 
     def __init__(
-        self,
-        context_builder: LocalContextBuilder,
-        llm: BaseLLM,
-        system_prompt: str = LOCAL_SEARCH_SYSTEM_PROMPT,
+            self,
+            context_builder: LocalContextBuilder,
+            llm: BaseLLM,
+            system_prompt: str = LOCAL_SEARCH_SYSTEM_PROMPT,
     ):
         super().__init__(context_builder=context_builder, llm=llm)
         self.system_prompt = system_prompt
+        self.context_data = dict[str, dict]()
+        self.context_text = ""
 
     def search(self, query: str, **kwargs: Any):
         """Build local search context that fits a single context window and generate answer for the user question."""
         start_time = time.time()
 
         # 生成搜索上下文
-        context_text = self.context_builder.build_context(query, **kwargs)
+        context_text, context_data = self.context_builder.build_context(query, **kwargs)
         # 执行搜索操作
+        self.context_text = context_text
+        self.context_data = {key: value.to_dict() for key, value in context_data.items()}
 
         print(context_text)
         search_prompt = self.system_prompt.format(

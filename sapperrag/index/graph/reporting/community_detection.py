@@ -137,6 +137,7 @@ class CommunityDetection:
                         "level": level,
                         "title": community,
                         "id": community,
+                        "rating": 0
                     }
                 community_save[community]["entity_ids"].append(node_id)
                 community_save[community]["entity_descriptions"].append(json.dumps(node_details, ensure_ascii=False))
@@ -149,10 +150,10 @@ class CommunityDetection:
                     id=str(uuid.uuid4()),
                     title=value['title'],
                     full_content="\n".join(value["entity_descriptions"]),
-                    short_id=value["id"]
+                    short_id=value["id"],
+                    rating=0.0
                 )
             )
-
 
         return data
 

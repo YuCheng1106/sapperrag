@@ -1,5 +1,6 @@
 from collections import defaultdict
 from typing import cast, Any
+from sapperrag.llm.text_utils import num_tokens
 
 import pandas as pd
 
@@ -7,6 +8,8 @@ import pandas as pd
 def build_relationship_context(
         selected_entities,
         relationships,
+        token_encoder,
+        entities,
         context_name="Relationships",
         top_k_relationships: int = 10,
         column_delimiter: str = "|",
@@ -14,10 +17,12 @@ def build_relationship_context(
 ):
     selected_relationships = _filter_relationships(
         selected_entities=selected_entities,
-        relationships=relationships
+        relationships=relationships,
+        top_k_relationships=top_k_relationships
     )
 
     current_context_text = f"-----{context_name}-----" + "\n"
+    current_token = 0
     header = ["relation_type", "source", "target", "description"]
     current_context_text += column_delimiter.join(header) + "\n"
     all_context_records = [header]
@@ -26,8 +31,8 @@ def build_relationship_context(
         description = " ".join([f"{k}: {v}" for k, v in relationship.attributes.items()])
         new_context = [
             relationship.type,
-            relationship.source,
-            relationship.target,
+            get_entity_title_by_id(entities=entities, given_id=relationship.source),
+            get_entity_title_by_id(entities=entities, given_id=relationship.target),
             description,
         ]
 
@@ -35,6 +40,9 @@ def build_relationship_context(
 
         current_context_text += new_context_text
         all_context_records.append(new_context)
+        current_token += num_tokens(current_context_text, token_encoder)
+        if current_token >= max_tokens:
+            break
 
     if len(all_context_records) > 1:
         record_df = pd.DataFrame(
@@ -137,3 +145,9 @@ def _filter_relationships(
 
     relationship_budget = top_k_relationships * len(selected_entities)
     return in_network_relationships + out_network_relationships[:relationship_budget]
+
+
+def get_entity_title_by_id(entities, given_id):
+    for entity in entities:
+        if entity.id == given_id:
+            return entity.title
