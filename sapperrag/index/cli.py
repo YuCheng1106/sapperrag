@@ -24,6 +24,6 @@ def run_indexer(dir_path, index_type):
         indexer = GraphIndexer(chatgpt, embeder, local_file_reader)
     else:
         indexer = TextIndexer(chatgpt, embeder, local_file_reader)
-    return indexer.build_index(dir_path)
+    return indexer.build_index(dir_path + "/input")
 
 

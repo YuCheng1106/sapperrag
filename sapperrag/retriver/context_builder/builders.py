@@ -23,3 +23,15 @@ class LocalContextBuilder(ABC):
         **kwargs,
     ):
         """Build the context for the local search mode."""
+
+
+class TextContextBuilder(ABC):
+    """Base class for local-search context builders."""
+
+    @abstractmethod
+    def build_context(
+        self,
+        query: str,
+        **kwargs,
+    ):
+        """Build the context for the local search mode."""

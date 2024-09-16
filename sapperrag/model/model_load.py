@@ -1,7 +1,9 @@
 import json
 
+import numpy as np
 import pandas as pd
 
+from sapperrag.model import Document
 from sapperrag.model.community import Community
 from sapperrag.model.entity import Entity
 from sapperrag.model.relationship import Relationship
@@ -87,3 +89,34 @@ def load_community(csv_file_path: str):
     return dataclass_list
 
 
+def load_document(csv_file_path: str):
+    df = pd.read_csv(csv_file_path)
+
+    dataclass_list = []
+    for _, row in df.iterrows():
+        dataclass_list.append(Document(
+            id=row.id,
+            short_id=row.short_id,
+            title=row.title,
+            raw_content=row.raw_content,
+            type=row.type
+        ))
+    return dataclass_list
+
+
+def load_embeddings(file_path: str):
+    # Load the data from the .npz file
+    with np.load(file_path, allow_pickle=True) as data:
+        ids = data['ids']
+        embeddings = data['embeddings']
+
+        # Convert byte IDs to string if necessary
+        ids = [id.decode('utf-8') if isinstance(id, bytes) else id for id in ids]
+
+        # Create a DataFrame
+        df = pd.DataFrame({
+            'ID': ids,
+            'Embedding': list(embeddings)
+        })
+
+        return df

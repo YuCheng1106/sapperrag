@@ -46,21 +46,3 @@ class ChunkEmbedder:
 
         # Save the data
         np.savez_compressed(output_file, ids=ids, embeddings=embeddings)
-
-
-    def load_embeddings_to_dataframe(self, file_path):
-        # Load the data from the .npz file
-        with np.load(file_path, allow_pickle=True) as data:
-            ids = data['ids']
-            embeddings = data['embeddings']
-
-            # Convert byte IDs to string if necessary
-            ids = [id.decode('utf-8') if isinstance(id, bytes) else id for id in ids]
-
-            # Create a DataFrame
-            df = pd.DataFrame({
-                'ID': ids,
-                'Embedding': list(embeddings)
-            })
-
-            return df

@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/tests/generate.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/graph_parse.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/graph_parse_test.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/query_test.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/query_text.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/source.csv" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>

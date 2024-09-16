@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from abc import ABC, abstractmethod
 from typing import List
 
-
 # Abstract base class for chunking strategies
 class BaseChunkingStrategy(ABC):
     @abstractmethod
@@ -80,13 +79,17 @@ class FixedLengthWordChunking(BaseChunkingStrategy):
 
 # Sliding window chunking
 class SlidingWindowChunking(BaseChunkingStrategy):
-    def __init__(self, window_size=100, step=50):
+    def __init__(self, window_size=512, step=512):
         self.window_size = window_size
         self.step = step
 
     def chunk(self, text: str) -> List[str]:
-        words = text.split()
         chunks = []
-        for i in range(0, len(words), self.step):
-            chunks.append(' '.join(words[i:i + self.window_size]))
+        text_length = len(text)
+
+        for i in range(0, text_length, self.step):
+            chunk = text[i:i + self.window_size]
+            if chunk:
+                chunks.append(chunk)
+
         return chunks

@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from typing import List
 from sapperrag.model.document import Document
 from sapperrag.read.base import BaseReader, ReadResult
 from sapperrag.read.read_tool import ReadToolFacTory
@@ -11,7 +12,7 @@ class DocumentReader(BaseReader):
     def __init__(self):
         super().__init__()
 
-    def read(self, dir_path: str) -> ReadResult:
+    def read(self, dir_path: str) -> List[Document]:
         """Synchronously reads all files in the given directory."""
         file_list = []
         file_reader = ReadToolFacTory()
@@ -29,9 +30,9 @@ class DocumentReader(BaseReader):
                 except Exception as e:
                     print(f"Failed to read file {file_path}: {e}")
 
-        return ReadResult(documents=file_list)
+        return file_list
 
-    async def aread(self, dir_path: str) -> ReadResult:
+    async def aread(self, dir_path: str) -> List[Document]:
         """Asynchronously reads all files in the given directory."""
         # Use asyncio.to_thread to run the synchronous read method in a non-blocking way
         return await asyncio.to_thread(self.read, dir_path)

@@ -21,12 +21,12 @@ class BaseReader(ABC):
         pass
 
     @abstractmethod
-    def read(self, dir_path: str) -> ReadResult:
+    def read(self, dir_path: str) -> list[Document]:
         """Searches for files that match the query and returns a list of ReadResult objects."""
         pass
 
     @abstractmethod
-    async def aread(self, dir_path: str) -> ReadResult:
+    async def aread(self, dir_path: str) -> list[Document]:
         """Asynchronously searches for files that match the query and returns a list of ReadResult objects."""
         pass
 

@@ -16,9 +16,9 @@ class TextIndexer(Indexer):
         """Build the context for the local search mode."""
         read_result = self.local_file_reader.read(dir_path=dir_path)
         text_file_chunker = TextFileChunker(chunk_type="sliding")
-        chunk_result = text_file_chunker.chunk(read_result.documents)
+        chunk_result = text_file_chunker.chunk(read_result)
         chunk_embedder = ChunkEmbedder(self.embeder)
         embed_result = chunk_embedder.embed(chunk_result)
         chunk_embedder.save(dir_path)
-        print("hello")
+
         return embed_result

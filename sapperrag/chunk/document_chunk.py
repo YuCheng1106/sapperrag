@@ -8,7 +8,7 @@ import asyncio
 
 
 class TextFileChunker(BaseChunker):
-    def __init__(self, chunk_type: str = "regex", **kwargs):
+    def __init__(self, chunk_type: str = "sliding", **kwargs):
         super().__init__()
         self.chunker = ChunkToolFacTory().strategies.get(chunk_type)
         if not self.chunker:
