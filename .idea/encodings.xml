@@ -2,10 +2,21 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/macro_revise/revisor_generate.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/prompts/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/prompts/refiner_apply_prompt.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/prompts/refiner_generate_prompt.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/prompts/revisor_apply_prompt.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/copyboost/prompts/revisor_generate_prompt.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/output/text_chunks.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sapperrag/read/convert_tool.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/copy_boorast_test.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/copyboost_test.py" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/tests/generate.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/graph_parse.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/graph_parse_test.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/macro_test.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/query_test.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/query_text.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/source.csv" charset="UTF-8" />

@@ -18,3 +18,8 @@ class BaseChunker(ABC):
     async def achunk(self, dir_path: str) -> List[TextChunk]:
         """Asynchronously searches for files in the directory and returns a list of TextChunk objects."""
         pass
+
+    @abstractmethod
+    async def save(self, save_path: str):
+        """Asynchronously searches for files in the directory and returns a list of TextChunk objects."""
+        pass

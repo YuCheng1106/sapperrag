@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="jiewang@10.75.76.4:22" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
+      <paths name="jiewang@10.75.76.4:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/jiewang/S3R" local="$PROJECT_DIR$/../s3r" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="root@hz-t2.matpool.com:26536">
         <serverdata>
           <mappings>
@@ -94,5 +101,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

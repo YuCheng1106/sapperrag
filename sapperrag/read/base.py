@@ -30,3 +30,7 @@ class BaseReader(ABC):
         """Asynchronously searches for files that match the query and returns a list of ReadResult objects."""
         pass
 
+    @abstractmethod
+    async def save(self, save_path: str):
+        """Asynchronously searches for files that match the query and returns a list of ReadResult objects."""
+        pass

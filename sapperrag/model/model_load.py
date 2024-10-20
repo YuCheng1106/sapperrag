@@ -1,4 +1,5 @@
 import json
+from typing import List
 
 import numpy as np
 import pandas as pd
@@ -43,7 +44,7 @@ def load_entities(csv_file_path: str, communities=None, entities=None):
     return entities
 
 
-def load_text_chunks(csv_file_path: str):
+def load_text_chunks(csv_file_path: str) -> List[TextChunk]:
     df = pd.read_csv(csv_file_path)
 
     dataclass_list = []

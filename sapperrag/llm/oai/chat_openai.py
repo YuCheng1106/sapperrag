@@ -29,10 +29,11 @@ class ChatOpenAI(BaseLLM):
         except Exception as e:
             print(f"An error occurred: {e}")
 
-    def generate(self, messages: List[dict], streaming: bool = False, **kwargs: Any) -> str:
+    def generate(self, messages: List[dict], response_format: str = "text", streaming: bool = False,  **kwargs: Any) -> str:
         response = self.client.chat.completions.create(
             model="gpt-4o",
-            messages=messages
+            messages=messages,
+            response_format={"type": response_format}
         )
         return response.choices[0].message.content
 

@@ -35,7 +35,7 @@ class TextSearch(BaseSearch):
         self.context_text = context_text
         self.context_data = {key: value.to_dict() for key, value in context_data.items()}
 
-        print(context_text)
+        # print(context_text)
         search_prompt = self.system_prompt.format(
             context_data=context_text, response_type="plain"
         )

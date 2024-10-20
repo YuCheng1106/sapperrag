@@ -139,7 +139,7 @@ class GraphIndexer(Indexer):
         self.embeder = embeder
         self.local_file_reader = local_file_reader
 
-    def build_index(self, dir_path, **kwargs):
+    def build_index(self, dir_path, save_path, **kwargs):
         read_result = self.local_file_reader.read(dir_path=dir_path)
         text_file_chunker = TextFileChunker()
         chunk_result = text_file_chunker.chunk(read_result.documents)

@@ -1,7 +1,9 @@
+import os
 from sapperrag.chunk.base import BaseChunker
 from sapperrag.model.document import Document
 from sapperrag.model.text_chunk import TextChunk
 from sapperrag.chunk.chunk_tool import ChunkToolFacTory
+from sapperrag.model import save_model_to_csv
 from uuid import uuid4
 from typing import List
 import asyncio
@@ -13,6 +15,7 @@ class TextFileChunker(BaseChunker):
         self.chunker = ChunkToolFacTory().strategies.get(chunk_type)
         if not self.chunker:
             raise ValueError(f"Strategy {chunk_type} is not supported.")
+        self.result: List[TextChunk] = []
 
     def chunk(self, documents: List[Document]) -> List[TextChunk]:
         """Chunks the text based on the selected strategy."""
@@ -32,9 +35,14 @@ class TextFileChunker(BaseChunker):
                     short_id += 1
             except Exception as e:
                 print(f"Error chunking document {document.title}: {e}")
+
+        self.result = all_chunks
         return all_chunks
 
     async def achunk(self, documents: List[Document]) -> List[TextChunk]:
         """Asynchronously chunks the text based on the selected strategy."""
         loop = asyncio.get_event_loop()
         return await loop.run_in_executor(None, self.chunk, documents)
+
+    def save(self, save_path: str):
+        save_model_to_csv(self.result, os.path.join(save_path, "text_chunks.csv"))
