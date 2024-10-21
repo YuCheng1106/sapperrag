@@ -1,6 +1,6 @@
 # SapperRAG API 调用指南
 ## 目录
-1. [文件转换（File Conversion）](#1.-文件转换（File Conversion）)
+1. [文件转换（File Conversion）](#1.-文件转换（File-Conversion）)
 2. [读取（Reading）](#2.-读取（Reading）)
 3. [切片（Chunking）](#3.-切片（Chunking）)
 4. [嵌入（Embedding）](#4.-嵌入（Embedding）)
