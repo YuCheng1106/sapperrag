@@ -1,4 +1,4 @@
-#SapperRAG API 调用指南
+# SapperRAG API 调用指南
 ## 目录
 1. [文件转换（File Conversion）](#1.-文件转换（File Conversion）)
 2. [读取（Reading）](#2.-读取（Reading）)
@@ -9,7 +9,7 @@
 7. [获取回答（Getting Answers）](#7.-获取回答（Getting-Answers）)
 
 ### 1. 文件转换（File Conversion）
-####使用类：ConvertToolFactory
+#### 使用类：ConvertToolFactory
 **1.1 调用方式**
 ```python
 from sapperrag import ConvertToolFactory
@@ -34,7 +34,7 @@ print(markdown_content)
 - **输出**：转换后的 Markdown 内容，以字符串形式返回。
 
 ### 2. 读取（Reading）
-####使用类：DocumentReader
+#### 使用类：DocumentReader
 **2.1 调用方式**
 ```python
 from sapperrag import DocumentReader
@@ -62,8 +62,8 @@ local_file_reader.save("../output")
 - **输入**：文件夹路径（例如：`"../input"`）
 - **输出**：读取到的文档对象列表，并将结果保存到指定的输出路径。
 
-###3. 切片（Chunking）
-####使用类：TextFileChunker
+### 3. 切片（Chunking）
+#### 使用类：TextFileChunker
 **3.1 调用方式**
 ```python
 from sapperrag import TextFileChunker
@@ -91,8 +91,8 @@ text_file_chunker.save("../output")
 - **输入**：包含文档对象的列表（例如：`read_result`）
 - **输出**：文本切片对象列表，并将结果保存到指定的输出路径。
 
-###4. 嵌入（Embedding）
-####使用类：ChunkEmbedder 和 Embedding Model
+### 4. 嵌入（Embedding）
+#### 使用类：ChunkEmbedder 和 Embedding Model
 **4.1 调用方式**
 ```python
 from sapperrag import ChunkEmbedder
@@ -123,7 +123,7 @@ chunk_embedder.save("../output")
 **4.3 输入输出**
 - **输入**：文本切片对象列表（例如：`chunk_result`）
 - **输出**：嵌入向量列表，并将结果保存到指定的输出路径。
-###5. 索引（Indexing）
+### 5. 索引（Indexing）
 **5.1 调用方式**
 ```python
 from sapperrag import run_indexer
@@ -142,8 +142,8 @@ run_indexer("../input", "../output", "text")
 - **输入**：数据输入路径，数据输出路径，数据类型
 - **输出**：索引成功后，结果保存在指定的输出路径。
 
-###6. 获取上下文（Building Context）
-####使用类：TextSearchContext
+### 6. 获取上下文（Building Context）
+#### 使用类：TextSearchContext
 
 **6.1 调用方式**
 ```python
@@ -170,8 +170,8 @@ context = context_builder.build_context(query)
 - **输入**：查询语句（例如：`"高新技术企业和科技型中小企业快速增长"`）
 - **输出**：与查询相关的上下文文本。
 
-###7. 获取回答（Getting Answers）
-####使用类：TextSearch
+### 7. 获取回答（Getting Answers）
+#### 使用类：TextSearch
 
 **7.1 调用方式**
 ```python
